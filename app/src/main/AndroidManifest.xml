@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Practice">
         <activity
-            android:name=".bus_information_all"
+            android:name=".activity_claim"
+            android:exported="false" />
+        <activity
+            android:name=".activity_all"
+            android:exported="false" />
+        <activity
+            android:name=".activity_select"
+            android:exported="false" />
+        <activity
+            android:name=".activity_notification"
+            android:exported="false" />
+        <activity
+            android:name=".activity_start1"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

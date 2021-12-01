@@ -14,15 +14,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        Button btn1 = (Button)findViewById(R.id.btn_start);
-        btn1.setOnClickListener(new View.OnClickListener() {
+        Button btn_start = (Button)findViewById(R.id.btn_start);
+        btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),bus_information_all.class);
+                Intent intent = new Intent(getApplicationContext(),activity_start1.class);
                 startActivity(intent);
             }
         });
 
     }
-    //첫번째 커밋입니다.
 }
