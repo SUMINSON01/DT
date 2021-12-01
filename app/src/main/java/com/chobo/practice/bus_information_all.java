@@ -1,5 +1,14 @@
 package com.chobo.practice;
 
-public class bus_information_all {
+import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Bundle;
+
+public class bus_information_all extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
 }
