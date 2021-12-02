@@ -20,9 +20,9 @@ public class activity_claim extends AppCompatActivity {
 
         Intent intent = getIntent();
         String userID = intent.getStringExtra("userID");
-        String userPass = intent.getStringExtra("userPass");
+        String userAge = intent.getStringExtra("userAge");
 
         tv_id.setText(userID);
-        tv_pass.setText(userPass);
+        tv_pass.setText(userAge);
     }
 }

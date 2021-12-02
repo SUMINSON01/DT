@@ -54,12 +54,12 @@ public class activity_claim_login extends AppCompatActivity {
                             boolean success = jsonObject.getBoolean("success");
                             if(success){
                                 String userID = jsonObject.getString("userID");
-                                String userPass = jsonObject.getString("userPassword");
+                                String userAge = jsonObject.getString("userAge");
 
                                 Toast.makeText(getApplicationContext(), "로그인 성공",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(), activity_claim.class);
                                 intent.putExtra("userID", userID);
-                                intent.putExtra("userPass", userPass);
+                                intent.putExtra("userAge", userAge);
                                 startActivity(intent);
                             }
                             else {
