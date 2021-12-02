@@ -45,7 +45,7 @@ public class activity_start1 extends AppCompatActivity {
         btn_claim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_claim.class);
+                Intent intent = new Intent(getApplicationContext(), activity_claim_login.class);
                 startActivity(intent);
             }
         });
