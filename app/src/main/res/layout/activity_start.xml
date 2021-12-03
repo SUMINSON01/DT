@@ -8,16 +8,18 @@
 
     <Button
         android:id="@+id/btn_start"
+        style="@style/customButtonFontStyle"
         android:layout_width="275dp"
         android:layout_height="100dp"
         android:text="시작"
         android:textSize="60sp"
+        app:backgroundTint="#8E5BEA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.757" />
+        app:layout_constraintVertical_bias="0.946" />
 
     <TextView
         android:id="@+id/textView3"
@@ -53,9 +55,63 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451"
         app:srcCompat="@drawable/khu" />
 
+    <CheckBox
+        android:id="@+id/checkBox8"
+        style="@style/customCheckboxFontStyle"
+        android:layout_width="158dp"
+        android:layout_height="38dp"
+        android:text="차고지 / 사색의 광장"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.659" />
 
+    <CheckBox
+        android:id="@+id/checkBox15"
+        style="@style/customCheckboxFontStyle"
+        android:layout_width="176dp"
+        android:layout_height="46dp"
+        android:text="경희대학교 정문"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.745" />
 
+    <CheckBox
+        android:id="@+id/checkBox16"
+        style="@style/customCheckboxFontStyle"
+        android:layout_width="141dp"
+        android:layout_height="49dp"
+        android:text="외국어대학 / 체육대학"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.744" />
+
+    <CheckBox
+        android:id="@+id/checkBox18"
+        style="@style/customCheckboxFontStyle"
+        android:layout_width="176dp"
+        android:layout_height="38dp"
+        android:text="선승관 / 생명과학대학"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.659" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

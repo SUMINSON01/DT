@@ -27,7 +27,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = mInflate.inflate(R.layout.activity_start1, parent, false);
+        View view = mInflate.inflate(R.layout.itme, parent, false);
         MyViewHolder viewHolder = new MyViewHolder(view);
         return viewHolder;
     }
@@ -46,9 +46,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public int getItemCount() {
-        try{
-
-        }
         return mList.size();
     }
 
@@ -63,10 +60,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            //locationNo1 = itemView.findViewById(R.id.tv_locationNo1);
-            //plateNo1 = itemView.findViewById(R.id.tv_plateNo1);
-            //routeId = itemView.findViewById(R.id.tv_routeId);
-            //stationId = itemView.findViewById(R.id.tv_stationId);
+            locationNo1 = itemView.findViewById(R.id.tv_locationNo1);
+            plateNo1 = itemView.findViewById(R.id.tv_plateNo1);
+            routeId = itemView.findViewById(R.id.tv_routeId);
+            stationId = itemView.findViewById(R.id.tv_stationId);
             predictTime1 = itemView.findViewById(R.id.tv_predictTime1);
 
         }
