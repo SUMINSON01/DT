@@ -15,8 +15,8 @@ public class activity_claim_start extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_claim_start);
 
-        Button btn_submit = findViewById(R.id.btn_submit);
-        btn_submit.setOnClickListener(new View.OnClickListener() {
+        Button btn_reg = findViewById(R.id.btn_reg);
+        btn_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "제출 완료",Toast.LENGTH_SHORT).show();
