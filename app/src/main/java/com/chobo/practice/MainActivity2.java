@@ -1,5 +1,6 @@
 package com.chobo.practice;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -46,7 +47,9 @@ public class MainActivity2 extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
 
-            requestUrl = "http://apis.data.go.kr/6410000/busarrivalservice/getBusArrivalList?serviceKey=" +dataKey+ "&stationId=228000710";
+            Intent intent = getIntent();
+            int stationId = intent.getIntExtra("stationId",0);
+            requestUrl = "http://apis.data.go.kr/6410000/busarrivalservice/getBusArrivalList?serviceKey=" +dataKey+ "&stationId="+stationId;
             try {
                 boolean b_locationNo1 = false; //첫번째 차량 위치정보
                 boolean b_plateNo1 =false;

@@ -46,7 +46,10 @@ public class activity_start1 extends AppCompatActivity {
         btn_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_all.class);
+                Intent getintent = getIntent();
+                int getStationId = getintent.getIntExtra("stationId",0);
+                Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                intent.putExtra("stationId",getStationId);
                 startActivity(intent);
             }
         });
@@ -55,6 +58,7 @@ public class activity_start1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), activity_claim_login.class);
+
                 startActivity(intent);
             }
         });

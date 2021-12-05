@@ -60,7 +60,7 @@
 
 
     <CheckBox
-        android:id="@+id/chk_first"
+        android:id="@+id/chk_second"
         style="@style/customCheckboxFontStyle"
         android:layout_width="180dp"
         android:layout_height="46dp"
@@ -74,15 +74,15 @@
         app:layout_constraintVertical_bias="0.71" />
 
     <CheckBox
-        android:id="@+id/checkBox16"
+        android:id="@+id/chk_first"
         style="@style/customCheckboxFontStyle"
         android:layout_width="180dp"
         android:layout_height="49dp"
         android:text="경희대 정문 방향"
         android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.712" />

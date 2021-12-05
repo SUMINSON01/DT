@@ -5,18 +5,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_start1">
+    tools:context=".activity_start1"><![CDATA[
 
+
+    " />
+
+
+
+    ]]>
 
     <Button
         android:id="@+id/btn_notification"
         android:layout_width="275dp"
         android:layout_height="100dp"
+        android:layout_marginBottom="524dp"
         android:text="알림받기"
         android:textSize="60sp"
-        tools:ignore="MissingConstraints,UnknownIdInLayout"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="123dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
 
     <Button
         android:id="@+id/btn_all"

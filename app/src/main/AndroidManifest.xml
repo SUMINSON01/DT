@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Practice"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".toFrontDoor"
+            android:exported="false" />
+        <activity
+            android:name=".toSasek"
+            android:exported="false" />
+        <activity
+            android:name=".alertDialog"
+            android:exported="false" />
+        <activity
             android:name=".activity_claim_select"
             android:exported="false" />
         <activity
@@ -29,12 +38,6 @@
             android:exported="false" />
         <activity
             android:name=".activity_claim"
-            android:exported="false" />
-        <activity
-            android:name=".activity_all"
-            android:exported="false" />
-        <activity
-            android:name=".activity_select"
             android:exported="false" />
         <activity
             android:name=".activity_notification"
