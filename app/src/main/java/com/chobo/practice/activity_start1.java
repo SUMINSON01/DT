@@ -29,7 +29,7 @@ public class activity_start1 extends AppCompatActivity {
         setContentView(R.layout.activity_start1);
 
         Button btn_notification = (Button) findViewById(R.id.btn_notification);
-        Button btn_select = (Button) findViewById(R.id.btn_select);
+
         Button btn_all = (Button) findViewById(R.id.btn_all);
         Button btn_claim = (Button) findViewById(R.id.btn_claim);
 
@@ -41,13 +41,7 @@ public class activity_start1 extends AppCompatActivity {
             }
         });
 
-        btn_select.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_select.class);
-                startActivity(intent);
-            }
-        });
+
 
         btn_all.setOnClickListener(new View.OnClickListener() {
             @Override

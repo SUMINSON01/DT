@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="plateNo1; "
+            android:text="차량번호: "
+            android:textSize="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
@@ -31,10 +32,12 @@
         <TextView
             android:text="locationNo1; "
             android:layout_width="wrap_content"
+            android:textSize="20dp"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/tv_locationNo1"
             android:layout_width="match_parent"
+            android:textSize="20dp"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
@@ -44,10 +47,12 @@
         android:layout_height="wrap_content">
         <TextView
             android:text="routeId; "
+            android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/tv_routeId"
+            android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -58,10 +63,12 @@
         android:layout_height="wrap_content">
         <TextView
             android:text="stationId; "
+            android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/tv_stationId"
+            android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -71,14 +78,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="predictTime1; "
+            android:text="도착까지 남은 시간 : "
+            android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/tv_predictTime1"
             android:layout_width="wrap_content"
+            android:textSize="20dp"
             android:layout_height="wrap_content" />
     </LinearLayout>
+
+
 
     <!--구분선-->
     <View
