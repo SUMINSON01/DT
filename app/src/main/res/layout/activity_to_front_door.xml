@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="경희대채육대학.외대"
+        android:text="경희대체육대학.외대"
         android:textSize="30dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="200dp" />
