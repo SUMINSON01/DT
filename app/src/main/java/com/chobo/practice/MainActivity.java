@@ -29,11 +29,19 @@ public class MainActivity extends AppCompatActivity {
 
                 ad.setIcon(R.drawable.khu);
                 ad.setTitle("경고");
-                ad.setMessage("방향을 선택해주세요");
 
 
-
-                if(chkfirst.isChecked()){
+                if(chkfirst.isChecked() && chksecond.isChecked()){
+                    ad.setPositiveButton("닫기", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    ad.setMessage("방향을 하나만 선택해주세요");
+                    ad.show();
+                }
+                else if(chkfirst.isChecked()){
                     startActivity(intentfirst);
                 }
                 else if(chksecond.isChecked()){
@@ -46,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                             dialog.dismiss();
                         }
                     });
+                    ad.setMessage("방향을 선택해주세요");
                     ad.show();
 
                 }

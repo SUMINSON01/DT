@@ -3,9 +3,13 @@ package com.chobo.practice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -30,15 +34,6 @@ public class activity_claim_login extends AppCompatActivity {
         btn_login = findViewById(R.id.btn_login);
         btn_register = findViewById(R.id.btn_register);
 
-        // 회원가입 버튼
-        btn_register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_claim_register.class);
-                startActivity(intent);
-            }
-        });
-
         // 로그인 버튼
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,32 +45,39 @@ public class activity_claim_login extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
-                            if(success){
-                                String userID = jsonObject.getString("userID");
-                                String userAge = jsonObject.getString("userAge");
+                JSONObject jsonObject = new JSONObject(response);
+                boolean success = jsonObject.getBoolean("success");
+                if (success) {
+                    String userID = jsonObject.getString("userID");
+                    String userAge = jsonObject.getString("userAge");
 
-                                Toast.makeText(getApplicationContext(), "로그인 성공",Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), activity_claim.class);
-                                intent.putExtra("userID", userID);
-                                intent.putExtra("userAge", userAge);
-                                startActivity(intent);
-                            }
-                            else {
-                                Toast.makeText(getApplicationContext(), "로그인 실패",Toast.LENGTH_SHORT).show();
-                                return;
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                };
-                LoginRequest loginRequest = new LoginRequest(userID, userPass, responseListener);
+                    Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), activity_claim.class);
+                    intent.putExtra("userID", userID);
+                    intent.putExtra("userAge", userAge);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    };
+    LoginRequest loginRequest = new LoginRequest(userID, userPass, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 queue.add(loginRequest);
             }
         });
 
+        // 회원가입 버튼
+        btn_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), activity_claim_register.class);
+                startActivity(intent);
+            }
+        });
     }
 }
