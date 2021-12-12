@@ -36,9 +36,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         //binding
         holder.locationNo1.setText(mList.get(position).locationNo1);
-        holder.plateNo1.setText(mList.get(position).plateNo1);
-        holder.routeId.setText(mList.get(position).routeId);
-        holder.stationId.setText(mList.get(position).stationId);
+        holder.routeId.setText(mList.get(position).plateNo1);
+        switch(mList.get(position).routeId){
+            case "200000115": holder.plateNo1.setText("5100"); break;
+            case "234000016": holder.plateNo1.setText("1112"); break;
+            case "200000112": holder.plateNo1.setText("7000"); break;
+            case "200000103": holder.plateNo1.setText("9"); break;
+            case "234000884": holder.plateNo1.setText("1560"); break;
+            default:holder.plateNo1.setText("경희대학교 버스가 아닙니다.");
+        }
+
+
         holder.predictTime1.setText(mList.get(position).predictTime1);
 
         //Click event
@@ -54,7 +62,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public TextView locationNo1;
         public TextView plateNo1;
         public TextView routeId;
-        public TextView stationId;
         public TextView predictTime1;
 
         public MyViewHolder(View itemView) {
@@ -63,7 +70,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             locationNo1 = itemView.findViewById(R.id.tv_locationNo1);
             plateNo1 = itemView.findViewById(R.id.tv_plateNo1);
             routeId = itemView.findViewById(R.id.tv_routeId);
-            stationId = itemView.findViewById(R.id.tv_stationId);
             predictTime1 = itemView.findViewById(R.id.tv_predictTime1);
 
         }

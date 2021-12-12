@@ -45,7 +45,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btn_select"
         android:layout_width="338dp"
         android:layout_height="64dp"
         android:text="선택완료"

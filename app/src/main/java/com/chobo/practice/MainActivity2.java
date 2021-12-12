@@ -54,7 +54,6 @@ public class MainActivity2 extends AppCompatActivity {
                 boolean b_locationNo1 = false; //첫번째 차량 위치정보
                 boolean b_plateNo1 =false;
                 boolean b_routeId = false;
-                boolean b_stationId = false;
                 boolean b_predictTime1 = false; //첫번째 차량 도착예상시간
 
                 URL url = new URL(requestUrl);
@@ -85,7 +84,6 @@ public class MainActivity2 extends AppCompatActivity {
                             if (parser.getName().equals("locationNo1")) b_locationNo1 = true;
                             if (parser.getName().equals("plateNo1")) b_plateNo1 = true;
                             if (parser.getName().equals("routeId")) b_routeId = true;
-                            if (parser.getName().equals("stationId")) b_stationId = true;
                             if (parser.getName().equals("predictTime1")) b_predictTime1 = true;
                             break;
                         case XmlPullParser.TEXT:
@@ -98,9 +96,6 @@ public class MainActivity2 extends AppCompatActivity {
                             } else if (b_routeId) {
                                 bus.setRouteId(parser.getText());
                                 b_routeId = false;
-                            } else if(b_stationId) {
-                                bus.setStationId(parser.getText());
-                                b_stationId = false;
                             } else if(b_predictTime1) {
                                 bus.setPredictTime1(parser.getText());
                                 b_predictTime1 = false;
