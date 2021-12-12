@@ -21,7 +21,7 @@ public class activity_claim_start extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "제출 완료",Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(getApplicationContext(), activity_claim.class);
+                Intent intent = new Intent(getApplicationContext(), activity_start1.class);
                 startActivity(intent);
             }
         });
