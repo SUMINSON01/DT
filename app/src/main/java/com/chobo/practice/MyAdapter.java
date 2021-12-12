@@ -35,7 +35,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         //binding
-        holder.locationNo1.setText(mList.get(position).locationNo1);
+
+
+
+        holder.predictTime1.setText("5~7분뒤 도착");
+        holder.locationNo1.setText("4");
         holder.routeId.setText(mList.get(position).plateNo1);
         switch(mList.get(position).routeId){
             case "200000115": holder.plateNo1.setText("5100"); break;
@@ -47,7 +51,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
 
 
-        holder.predictTime1.setText(mList.get(position).predictTime1);
+
 
         //Click event
     }
